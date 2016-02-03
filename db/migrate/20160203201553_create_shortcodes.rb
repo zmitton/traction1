@@ -1,7 +1,9 @@
 class CreateShortcodes < ActiveRecord::Migration
   def change
     create_table :shortcodes do |t|
-      t.string :destination_url
+      t.string  :destination_url
+      t.integer :num_clicks
+      t.string  :destination_url
 
       t.timestamps null: false
     end
