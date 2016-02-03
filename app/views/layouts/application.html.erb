@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Traction</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application'%>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Traction</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application'%>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <nav>
+      <a href="<%= new_shortcode_path %>">Short Codes</a>
+      <a href="<%= websites_path %>">Top Websites</a>
+    </nav>
 
-<%= yield %>
+    <%= yield %>
 
-</body>
+  </body>
 </html>

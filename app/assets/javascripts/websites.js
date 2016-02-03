@@ -1,5 +1,5 @@
-$( document ).ready(function() {
-  var forms = $('form');
+$(document).ready(function() {
+  var forms = $('form.topsite');
   for( var i = 0 ; i < forms.length ; i++){
     initForm($(forms[i]));
   }

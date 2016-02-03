@@ -8,7 +8,7 @@
   </tr>
   <% @websites.each do |website| %>
     <div id="modal-<%=website.id%>" class="hidden-modal">
-      <form action="websites/<%=website.id%>" method="POST">
+      <form action="websites/<%=website.id%>" method="POST" class="topsite">
         <input type="hidden" name="_method" value="PUT"/>
         <h1> Ranking: <%= website.rank %></h1>
         <input name="url" value="<%= website.url %>"/>

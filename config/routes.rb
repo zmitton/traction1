@@ -3,9 +3,14 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'websites#index'
-  put 'websites/:id' => 'websites#update', as: :update_website
+  root 'websites#index',                              as: :websites
+  put  'websites/:id'       => 'websites#update',     as: :update_website
 
+  get  'shortcodes/new'     => 'shortcodes#new',      as: :new_shortcode
+  get  'shortcodes/:id'     => 'shortcodes#show',     as: :show_shortcode
+  post 'shortcodes/'        => 'shortcodes#create',   as: :create_shortcode
+  get  's/:id'              => 'shortcodes#redirect', as: :shortcode_redirect
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
