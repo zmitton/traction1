@@ -14,7 +14,7 @@ class ShortcodesController < ApplicationController
 
   def redirect
     shortcode = Shortcode.find(params[:id])
-    shortcode.update_columns( num_clicks: (shortcode.numclicks + 1) )
+    shortcode.update_columns( num_clicks: (shortcode.num_clicks + 1) )
     redirect_to shortcode.destination_url
   end
 end

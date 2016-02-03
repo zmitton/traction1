@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 20160203201553) do
 
   create_table "shortcodes", force: :cascade do |t|
     t.string   "destination_url"
-    t.integer  "num_clicks"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.integer  "num_clicks",      default: 0
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "websites", force: :cascade do |t|
