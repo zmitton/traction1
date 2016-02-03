@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th>Rank</th>
+    <th>Name</th> 
+    <th>url</th>
+  </tr>
+  <% @websites.each do |website| %>
+    <tr>
+      <td><%= website.rank %></td>
+      <td><%= website.name %></td>
+      <td><%= website.url %></td>
+    </tr>
+  <% end %>
+</table>
