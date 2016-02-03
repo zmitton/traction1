@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'websites#index'
+  put 'websites/:id' => 'websites#update', as: :update_website
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

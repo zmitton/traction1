@@ -1,14 +1,24 @@
+<h1>Top Websites</h1>
 <table>
   <tr>
     <th>Rank</th>
     <th>Name</th> 
     <th>url</th>
+    <th>edit</th>
   </tr>
   <% @websites.each do |website| %>
-    <tr>
-      <td><%= website.rank %></td>
-      <td><%= website.name %></td>
-      <td><%= website.url %></td>
+    <div id="modal-<%=website.id%>" class="hidden-modal">
+      <form action="websites/<%=website.id%>" method="POST">
+        <input type="hidden" name="_method" value="PUT"/>
+        <h1> Ranking: <%= website.rank %></h1>
+        <input name="url" value="<%= website.url %>"/>
+        <input type="submit" value="Update"/>
+      </form>
+    </div>
+    <tr id="<%=website.id%>">
+      <%= render 'table_row', :website => website %>
     </tr>
   <% end %>
 </table>
+
+<%= will_paginate @websites %>
